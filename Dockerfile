@@ -1,5 +1,5 @@
-# Descargar la imagen de ubuntu 
-FROM php:8.1-cli
+# Descargar la imagen de ubuntu o debian 
+FROM debian:bullseye-slim
 
 # Actualizar la lista de actualizaciones  
 RUN apt-get update
@@ -7,7 +7,7 @@ RUN apt-get update
 # Actualizar la imagen 
 RUN apt-get upgrade -y
 
-# Copiar la carpeta webapp
+# Copiar la carpeta app
 COPY ./app /home/app
 
 # Establecer el directorio de trabajo
